@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 export const FONTS = StyleSheet.create({
   regular: {
-    fontFamily: 'Cairo-Regular',
+    fontFamily: 'Roboto-Regular',
   },
   medium: {
     fontFamily: 'Roboto-Medium',
