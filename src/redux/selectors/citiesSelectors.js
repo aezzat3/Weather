@@ -1,1 +1,1 @@
-export const getCities = state => state.cities.cities;
+export const getCities = state => state.citiesList.cities;

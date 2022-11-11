@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   itemSeparator: {
-    marginVertical: calcHeight(21.3),
+    marginVertical: calcHeight(12),
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: COLORS.brownishGrey,
     marginStart: calcWidth(9.2),
