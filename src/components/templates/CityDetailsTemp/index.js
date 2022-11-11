@@ -25,7 +25,6 @@ let CityDetailsTemp = () => {
   const cityDetails = useSelector(getAllCityDetails);
   const isLoading = cityDetails?.loading;
   const hasError = cityDetails?.error;
-  const data = cityDetails?.data[0];
 
   return (
     <View style={styles.container}>
@@ -40,18 +39,35 @@ let CityDetailsTemp = () => {
                 <AppText style={styles.text}>{cityName}</AppText>
                 <CloudIcon style={styles.iconStyle} />
                 <View style={styles.textContent}>
-                  <AppText style={styles.text}>Main</AppText>
-                  <AppText style={styles.subText}>{data?.main}</AppText>
+                  <AppText style={styles.text}>Description</AppText>
+                  <AppText style={styles.subText}>
+                    {cityDetails?.data?.weather[0]?.description}
+                  </AppText>
                 </View>
                 <View style={styles.textContent}>
-                  <AppText style={styles.text}>Description</AppText>
-                  <AppText style={styles.subText}>{data?.description}</AppText>
+                  <AppText style={styles.text}>Temperature</AppText>
+                  <AppText style={styles.subText}>
+                    {cityDetails?.data?.main.temp}
+                  </AppText>
+                </View>
+                <View style={styles.textContent}>
+                  <AppText style={styles.text}>Humidity</AppText>
+                  <AppText style={styles.subText}>
+                    {cityDetails?.data?.main.humidity}
+                  </AppText>
+                </View>
+                <View style={styles.textContent}>
+                  <AppText style={styles.text}>Windspeed</AppText>
+                  <AppText style={styles.subText}>
+                    {' '}
+                    {cityDetails?.data?.wind.speed}
+                  </AppText>
                 </View>
               </>
             )}
           </>
         ) : (
-          <AppText>Something went wrong</AppText>
+          <AppText />
         )}
       </View>
     </View>

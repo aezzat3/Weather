@@ -18,7 +18,7 @@ const config = {
   key: 'root',
   storage: AsyncStorage,
   blacklist: [],
-  whitelist: ['lang', 'auth'],
+  whitelist: ['citiesList'],
 };
 
 const persistedReducer = persistReducer(config, reducers);

@@ -23,12 +23,12 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 4,
+      height: 7,
     },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
+    shadowOpacity: 0.43,
+    shadowRadius: 9.51,
 
-    elevation: 9,
+    elevation: 15,
   },
   text: {
     ...FONTS.bold,

@@ -13,8 +13,12 @@ let CityCard = ({
   onPressDelete,
 }) => (
   <View style={styles.container} activeOpacity={0.7}>
-    <CityIcon style={styles.icon} />
-    <AppText style={styles.text}>{item}</AppText>
+    <View style={styles.textContent}>
+      <CityIcon style={styles.icon} />
+      <AppText numberOfLines={1} style={styles.text}>
+        {item}
+      </AppText>
+    </View>
     <View style={styles.icons}>
       <DeleteIcon style={styles.deleteIcon} onPress={onPressDelete} />
       <InfoIcon style={styles.icon} onPress={onPressInfo} />

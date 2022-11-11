@@ -19,10 +19,6 @@ let AddCityModal = ({
       cityName: '',
     },
     validationSchema,
-    validateOnChange: true,
-    validateOnBlur: true,
-    validateOnMount: true,
-    initialErrors: {},
     onSubmit: values => onSubmit(values),
   });
 

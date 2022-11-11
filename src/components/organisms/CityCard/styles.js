@@ -7,21 +7,26 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
     paddingHorizontal: calcWidth(20),
     marginTop: calcHeight(10),
+    width: '100%',
   },
   icon: {
     height: calcHeight(30),
     width: calcHeight(30),
     marginRight: calcWidth(10),
   },
-  icons: {
-    flex: 2,
+  textContent: {
+    flex: 1,
     flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: calcWidth(10),
-    height: calcHeight(20),
+  },
+  icons: {
+    flex: 0.5,
+    flexDirection: 'row',
+    width: calcWidth(30),
+    height: calcHeight(27),
+    marginRight: calcWidth(30),
   },
   text: {
     ...FONTS.medium,
@@ -30,6 +35,5 @@ export default StyleSheet.create({
   deleteIcon: {
     ...FONTS.medium,
     fontSize: calcFont(20),
-    color: COLORS.watermelon,
   },
 });

@@ -5,5 +5,5 @@ export const getCityDetailsApi = async cityName => {
   const {data} = await axios.get(
     `${BASE_URL}/data/2.5/weather?q=${cityName}&appid=${API_KEY}`,
   );
-  return data?.weather;
+  return data;
 };
