@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {FlatList, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import CityIcon from '../../../../assets/images/City.svg';
@@ -12,6 +12,7 @@ import FloatButton from '../../molecules/FloatButton';
 import {CityCard} from '../../organisms/CityCard';
 import styles from './styles';
 import {AddCityModal} from '../../organisms/AddCityModal';
+import {navigateCityDetails} from '../../../navigation/navigator';
 
 let CitiesTemp = () => {
   const dispatch = useDispatch();
@@ -31,10 +32,6 @@ let CitiesTemp = () => {
     toggleModal();
   };
 
-  useEffect(() => {
-    console.log('citiescitiescitiescitiescities ', cities);
-  }, [cities]);
-
   return (
     <View style={styles.container}>
       <FlatList
@@ -44,6 +41,7 @@ let CitiesTemp = () => {
           <CityCard
             item={item}
             onPressDelete={() => onDeleteItem(item)}
+            onPressInfo={() => navigateCityDetails({cityName: item})}
             CityIcon={CityIcon}
             InfoIcon={InfoIcon}
             DeleteIcon={DeleteIcon}
